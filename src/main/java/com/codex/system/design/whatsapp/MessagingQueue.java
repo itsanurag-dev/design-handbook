@@ -1,105 +1,104 @@
 package com.codex.system.design.whatsapp;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.Queue;
+import java.util.*;
 
-public class MessagingQueue implements Queue {
-	SystemUser user;
-	String msg;	
-	public MessagingQueue(SystemUser user, String msg){
-		this.user = user;
-		this.msg = msg;
-	}
-	@Override
-	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	@Override
-	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public boolean contains(Object o) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public Iterator iterator() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public Object[] toArray() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public Object[] toArray(Object[] a) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public boolean remove(Object o) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public boolean containsAll(Collection c) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public boolean addAll(Collection c) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public boolean removeAll(Collection c) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public boolean retainAll(Collection c) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public void clear() {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public boolean add(Object e) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public boolean offer(Object e) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public Object remove() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public Object poll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public Object element() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public Object peek() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+/**
+ * Messaging queue for WhatsApp system users.
+ */
+public class MessagingQueue implements Queue<String> {
+    private final Queue<String> messages;
 
+    public MessagingQueue(SystemUser user) {
+        this.messages = new LinkedList<>();
+    }
+
+    @Override
+    public int size() {
+        return messages.size();
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return messages.isEmpty();
+    }
+
+    @Override
+    public boolean contains(Object o) {
+        return messages.contains(o);
+    }
+
+    @Override
+    public Iterator<String> iterator() {
+        return messages.iterator();
+    }
+
+    @Override
+    public Object[] toArray() {
+        return messages.toArray();
+    }
+
+    @Override
+    public <T> T[] toArray(T[] a) {
+        return messages.toArray(a);
+    }
+
+    @Override
+    public boolean add(String e) {
+        return messages.add(e);
+    }
+
+    @Override
+    public boolean remove(Object o) {
+        return messages.remove(o);
+    }
+
+    @Override
+    public boolean containsAll(Collection<?> c) {
+        return messages.containsAll(c);
+    }
+
+    @Override
+    public boolean addAll(Collection<? extends String> c) {
+        return messages.addAll(c);
+    }
+
+    @Override
+    public boolean removeAll(Collection<?> c) {
+        return messages.removeAll(c);
+    }
+
+    @Override
+    public boolean retainAll(Collection<?> c) {
+        return messages.retainAll(c);
+    }
+
+    @Override
+    public void clear() {
+        messages.clear();
+    }
+
+    @Override
+    public boolean offer(String e) {
+        return messages.offer(e);
+    }
+
+    @Override
+    public String remove() {
+        return messages.remove();
+    }
+
+    @Override
+    public String poll() {
+        return messages.poll();
+    }
+
+    @Override
+    public String element() {
+        return messages.element();
+    }
+
+    @Override
+    public String peek() {
+        return messages.peek();
+    }
 }

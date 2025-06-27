@@ -1,9 +1,8 @@
 package com.codex.system.design.whatsapp;
 
+/**
+ * Utility class for socket connection operations in WhatsApp.
+ */
 public class SocketConnectionUtil {
-	
-	public boolean isAlive() {
-		return true;
-	}
-
+    // Add socket connection utility methods as needed
 }

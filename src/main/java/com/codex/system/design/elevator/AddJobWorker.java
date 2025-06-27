@@ -1,25 +1,24 @@
 package com.codex.system.design.elevator;
 
-public class AddJobWorker  implements Runnable {
+/**
+ * Worker thread to add a job to the elevator system.
+ */
+public class AddJobWorker implements Runnable {
+    private final Elevator elevator;
+    private final Request request;
 
-	private Elevator elevator;
-	private Request request;
+    public AddJobWorker(Elevator elevator, Request request) {
+        this.elevator = elevator;
+        this.request = request;
+    }
 
-	AddJobWorker(Elevator elevator, Request request) {
-		this.elevator = elevator;
-		this.request = request;
-	}
-
-	@Override
-	public void run() {
-
-		try {
-			Thread.sleep(200);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		elevator.addJob(request);
-	}
-
+    @Override
+    public void run() {
+        try {
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        elevator.addJob(request);
+    }
 }

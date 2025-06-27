@@ -1,10 +1,13 @@
 package com.codex.system.design.urlshortner;
 
+/**
+ * Represents a short URL object for the URL shortener.
+ */
 public class ShortURL {
-
-	public void push_back(char c) {
-		// TODO Auto-generated method stub
-		
-	}
-
+    /**
+     * Appends a character to the short URL (placeholder).
+     */
+    public void push_back(char c) {
+        // Placeholder for adding a character to the short URL
+    }
 }

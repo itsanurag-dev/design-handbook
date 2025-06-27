@@ -1,7 +1,11 @@
 package com.codex.system.design.dropbox;
 
+/**
+ * Interface for document operations in Dropbox design.
+ */
 public interface Documents {
-	
-	void getOnlineDocs();
-
+    /**
+     * Retrieves online documents.
+     */
+    void getOnlineDocs();
 }

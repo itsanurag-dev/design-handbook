@@ -1,92 +1,89 @@
 package com.codex.system.design.autocomplete;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.PriorityQueue;
+import java.util.*;
 
-// https://aaronice.gitbook.io/lintcode/data_structure/design-search-autocomplete-system
-
+/**
+ * Autocomplete system using Trie data structure.
+ * Reference: https://aaronice.gitbook.io/lintcode/data_structure/design-search-autocomplete-system
+ */
 public class AutocompleteSearch {
+    /**
+     * Trie node for storing children and sentence counts.
+     */
+    private static class Trie {
+        Map<Character, Trie> children = new HashMap<>();
+        Map<String, Integer> counts = new HashMap<>();
+        boolean isWord = false;
+    }
 
-	class Trie {
-		Map<Character, Trie> children;
-		Map<String, Integer> counts;
-		boolean isWord;
+    /**
+     * Helper class for storing sentence and its count.
+     */
+    private static class Pair {
+        String str;
+        int count;
+        Pair(String str, int count) {
+            this.str = str;
+            this.count = count;
+        }
+    }
 
-		public Trie() {
-			children = new HashMap<>();
-			counts = new HashMap<>();
-			isWord = false;
-		}
-	}
+    private final Trie root;
+    private String prefix;
 
-	Trie root;
-	String prefix;
+    /**
+     * Initializes the autocomplete system with given sentences and their times.
+     * @param sentences array of sentences
+     * @param times array of times corresponding to each sentence
+     */
+    public AutocompleteSearch(String[] sentences, int[] times) {
+        root = new Trie();
+        prefix = "";
+        for (int i = 0; i < sentences.length; i++) {
+            add(sentences[i], times[i]);
+        }
+    }
 
-	public AutocompleteSearch(String[] sentences, int[] times) {
-		root = new Trie();
-		prefix = "";
+    /**
+     * Adds a sentence to the Trie with its count.
+     * @param str the sentence
+     * @param count the count
+     */
+    private void add(String str, int count) {
+        Trie node = root;
+        for (char c : str.toCharArray()) {
+            node.children.putIfAbsent(c, new Trie());
+            node = node.children.get(c);
+            node.counts.put(str, node.counts.getOrDefault(str, 0) + count);
+        }
+        node.isWord = true;
+    }
 
-		for (int i = 0; i < sentences.length; i++) {
-			add(sentences[i], times[i]);
-		}
-
-	}
-
-	private void add(String str, int count) {
-
-		char[] ch = str.toCharArray();
-		Trie node = root;
-
-		for (char c : ch) {
-			Trie nextNode = node.children.get(c);
-			if (nextNode == null) {
-				nextNode = new Trie();
-				node.children.put(c, nextNode);
-			}
-			node = nextNode;
-			node.counts.put(str, node.counts.getOrDefault(str, 0) + count);
-		}
-		node.isWord = true;
-	}
-	
-	public List<String> search(char c){
-		if (c == '#') {
+    /**
+     * Searches for top 3 autocomplete suggestions for the current prefix.
+     * @param c next character input
+     * @return list of top 3 suggestions
+     */
+    public List<String> search(char c) {
+        if (c == '#') {
             add(prefix, 1);
             prefix = "";
             return new ArrayList<>();
         }
-
-        prefix = prefix + c;
+        prefix += c;
         Trie node = root;
-        for (char cc: prefix.toCharArray()) {
+        for (char cc : prefix.toCharArray()) {
             node = node.children.get(cc);
-            if (node == null) 
-            	return new ArrayList<>();
+            if (node == null) return new ArrayList<>();
         }
-
-        PriorityQueue<Pair> pq = new PriorityQueue<>((o1, o2) -> (o1.count == o2.count ? o1.str.compareTo(o2.str) : o2.count - o1.count));
-
-        for (String str: node.counts.keySet()) {
-            pq.add(new Pair(str, node.counts.get(str)));
+        PriorityQueue<Pair> pq = new PriorityQueue<>((a, b) -> a.count == b.count ? a.str.compareTo(b.str) : b.count - a.count);
+        for (String str : node.counts.keySet()) {
+            pq.offer(new Pair(str, node.counts.get(str)));
         }
-		List<String> res = new ArrayList<String>();
-		for (int i = 0; i < 3 && !pq.isEmpty(); i++) {
-            Pair pair = pq.poll();
-            res.add(pair.str);
+        List<String> res = new ArrayList<>();
+        for (int i = 0; i < 3 && !pq.isEmpty(); i++) {
+            res.add(pq.poll().str);
         }
-
         return res;
-		
-	}
-	class Pair {
-        String str;
-        int count;
-        public Pair(String str, int count) {
-            this.str = str;
-            this.count = count;
-        }
     }
 }

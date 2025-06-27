@@ -1,48 +1,53 @@
 package com.codex.system.design.whatsapp;
 
-public class Receiver extends SystemUser{
-	int userId;
-	String name;
-	String City;
-	String Country;
-	// getter setter
-	
-	public boolean isReceiverAvailable(Receiver receiver, String msg) {
-		
-		return true;
-		
-	}
+/**
+ * Represents a receiver in the WhatsApp system.
+ */
+public class Receiver extends SystemUser {
+    private int userId;
+    private String name;
+    private String city;
+    private String country;
 
-	public int getUserId() {
-		return userId;
-	}
+    /**
+     * Checks if the receiver is available for a message.
+     * @param receiver the receiver
+     * @param msg the message
+     * @return true if available
+     */
+    public boolean isReceiverAvailable(Receiver receiver, String msg) {
+        return true;
+    }
 
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
+    public int getUserId() {
+        return userId;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getCity() {
-		return City;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setCity(String city) {
-		City = city;
-	}
+    public String getCity() {
+        return city;
+    }
 
-	public String getCountry() {
-		return Country;
-	}
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-	public void setCountry(String country) {
-		Country = country;
-	}
+    public String getCountry() {
+        return country;
+    }
 
+    public void setCountry(String country) {
+        this.country = country;
+    }
 }
