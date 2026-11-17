@@ -1,0 +1,56 @@
+import{_ as a,o as i,c as n,a0 as e}from"./chunks/framework.Zkdr1e1x.js";const c=JSON.parse('{"title":"Animal","description":"","frontmatter":{},"headers":[],"relativePath":"patterns/structural/bridge/animal.md","filePath":"patterns/structural/bridge/animal.md"}'),t={name:"patterns/structural/bridge/animal.md"};function l(h,s,p,r,k,d){return i(),n("div",null,[...s[0]||(s[0]=[e(`<h1 id="animal" tabindex="-1">Animal <a class="header-anchor" href="#animal" aria-label="Permalink to &quot;Animal&quot;">​</a></h1><ul><li><strong>Package:</strong> <code>dev.anurag.handbook.patterns.structural.bridge.Animal</code></li><li><strong>Source Code:</strong> <a href="https://github.com/itsanurag-dev/design-handbook/blob/main/src/main/java/dev/anurag/handbook/patterns/structural/bridge/Animal.java" target="_blank" rel="noreferrer">Animal.java</a></li></ul><hr><h2 id="implementation" tabindex="-1">Implementation <a class="header-anchor" href="#implementation" aria-label="Permalink to &quot;Implementation&quot;">​</a></h2><div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">package</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> dev.anurag.handbook.patterns.structural.bridge;</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">/**</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * The Bridge pattern is a structural design pattern with the intent of decoupling an abstraction from its implementation, </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> *  so that the two can vary independently (from the gang of fours Design Pattern book.) If this sounds a little confusing, </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * dont worry, it is. I performed considerable research to find you good references for the Bridge Pattern and the best </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * that I found is in the Design Patterns Explained: A New Perspective on Object-Oriented Design, Second Edition by </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * Alan Shalloway and James Trott, which describes this definition with the following commentary:</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> *     </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * I remember exactly what my first thoughts were when I read this: Huh?</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * And then: How come I understand every word in this sentence, but I have no idea what it means?</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * While comical, I believe that the authors crystallized my initial thoughts when I first encountered the bridge pattern. </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * While it sounds simple, it is rather complex, but that complexity introduces a very powerful design pattern. </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * The basic premise behind the bridge pattern is that you have a set of related objects (through inheritance) and </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * you have a set of objects that perform some operations on those objects and you want to be able to change both</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * sets of objects without breaking the loose coupling between them.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * The example that the authors presented was a set of shapes (a circle and a rectangle) and two different drawing</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * programs that know how to draw shapes (but differently.) The point was that the author wanted to be able to </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * add additional drawing programs as well as shapes without introducing redundancy or complex inheritance</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * hierarchies. A good description of the bridge pattern is defining two layers of abstraction: abstracting </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * objects and abstracting objects that perform actions on the first group of objects.The bridge pattern is </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * composed of the following components: Abstraction: defines the abstract interface for the set of related objects </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * (e.g. the Shape class) Refined Abstraction: extends the abstract interface and provides specific functionality </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * (e.g. Circle and Rectangle)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> *        </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * Implementor: defines the interface for the implementation classes (e.g. the drawing interface)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * Concrete Implementor: implementations of the implementor interface (e.g. drawing program 1 and drawing program 2)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * I think that an example will really bring this pattern to light. In this example I have a set of Animal objects and a set of </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * feeding objects. The animals eat, but they eat differently. The feeding objects are used by animals to eat their food, </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * but they perform differently. The following code shows how you might represent these classes:</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> *</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> *</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> *BRIDGE DESING PATTERN : Its nothing but the bridging of classes. Here we are creating bridge between monkey </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> *and BananaFeeding. In client class when we call the animal object (animals.add(new Monkey(new BananaFeeder()));)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> *and pass the values of monkey to create the monkey which is banana feeding then it will call the Monkey class which </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> *is internally call the feeding class .Thus here we are creating the a bridge between multiple classes &gt; BridgeDesingPattern </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> */</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> abstract</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Animal</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">	 protected</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Feeding feeding;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">	  public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> abstract</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> eat</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">	  protected</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Animal</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">( Feeding </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">feeding</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ) {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">	    this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.feeding </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> feeding;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">	  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">	  protected</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> peelFood</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">() {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">	    feeding.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">peelFood</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">	  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">	  public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> crackOpen</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">() {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">	    feeding.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">crackOpen</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">	  }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">	}</span></span></code></pre></div>`,5)])])}const g=a(t,[["render",l]]);export{c as __pageData,g as default};
