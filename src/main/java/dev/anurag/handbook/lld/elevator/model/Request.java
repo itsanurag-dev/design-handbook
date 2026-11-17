@@ -4,3 +4,4 @@ public interface Request {
     int getTargetFloor();
     Direction getDirection();
 }
+

@@ -30,3 +30,4 @@ public class ParkingSpot {
     public int getSpotNumber() { return spotNumber; }
     public VehicleType getType() { return type; }
 }
+

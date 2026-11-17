@@ -56,3 +56,4 @@ public class ParkingLotService {
         return BigDecimal.valueOf(10).add(BigDecimal.valueOf(hours * 5));
     }
 }
+

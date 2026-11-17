@@ -110,3 +110,4 @@ class CorePrimitivesTest {
         assertEquals(2, successfulParkings, "Only exactly 2 vehicles can park in a 2-spot facility");
     }
 }
+

@@ -29,3 +29,4 @@ public final class ExternalRequest implements Request {
         return "ExternalRequest{floor=" + sourceFloor + ", dir=" + direction + "}";
     }
 }
+

@@ -12,3 +12,4 @@ Upgrade the test suite to JUnit 5 (`junit-jupiter`), eliminate all JUnit 4 depen
 ## Consequences
 - **Positive**: Native support for `@DisplayName`, `@Nested` suites, `@Timeout` for concurrency safety, and `@ParameterizedTest`.
 - **Negative**: Legacy tests require namespace updates (`org.junit.Test` to `org.junit.jupiter.api.Test`).
+

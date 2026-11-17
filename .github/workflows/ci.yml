@@ -34,3 +34,4 @@ jobs:
         with:
           name: jacoco-coverage-report
           path: target/site/jacoco/
+

@@ -12,3 +12,4 @@ Mandate text-based Mermaid diagrams (`classDiagram`, `flowchart TD`, `sequenceDi
 ## Consequences
 - **Positive**: Git-diffable, editable by any contributor, renders natively in GitHub web and IDE previewers.
 - **Negative**: Complex diagrams with dozens of nodes can become visually crowded compared to specialized vector drawing suites.
+

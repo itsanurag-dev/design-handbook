@@ -25,3 +25,4 @@ public final class InternalRequest implements Request {
         return "InternalRequest{toFloor=" + destinationFloor + "}";
     }
 }
+

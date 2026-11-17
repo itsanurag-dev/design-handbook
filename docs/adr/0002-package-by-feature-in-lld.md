@@ -12,3 +12,4 @@ Package every LLD problem independently (`dev.anurag.handbook.lld.<system>`), co
 ## Consequences
 - **Positive**: High cohesion; each problem is completely self-contained and modular.
 - **Negative**: Minor duplication of generic value objects (e.g., `Direction`).
+
