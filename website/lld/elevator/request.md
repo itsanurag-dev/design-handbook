@@ -1,10 +1,12 @@
 # Request
 
-- **Package:** `dev.anurag.handbook.lld.elevator.model.Request`
-- **Source Code:** [Request.java](https://github.com/itsanurag-dev/design-handbook/blob/main/src/main/java/dev/anurag/handbook/lld/elevator/model/Request.java)
+> **System Domain:** [SCAN/LOOK Elevator System](/lld/elevator/request)
+> **Architecture Category:** Low-Level Object-Oriented Design (LLD)
 
----
+## Overview
+Production implementation of `Request` providing core state modeling, thread safety, and domain contracts for the **SCAN/LOOK Elevator System**.
 
-## Implementation
+## Java Implementation
 
 <<< @/../src/main/java/dev/anurag/handbook/lld/elevator/model/Request.java
+

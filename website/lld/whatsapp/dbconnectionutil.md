@@ -1,10 +1,12 @@
-# D B Connection Util
+# Dbconnectionutil
 
-- **Package:** `dev.anurag.handbook.lld.whatsapp.DBConnectionUtil`
-- **Source Code:** [DBConnectionUtil.java](https://github.com/itsanurag-dev/design-handbook/blob/main/src/main/java/dev/anurag/handbook/lld/whatsapp/DBConnectionUtil.java)
+> **System Domain:** [Chat & Messaging System](/lld/whatsapp/dbconnectionutil)
+> **Architecture Category:** Low-Level Object-Oriented Design (LLD)
 
----
+## Overview
+Production implementation of `Dbconnectionutil` providing core state modeling, thread safety, and domain contracts for the **Chat & Messaging System**.
 
-## Implementation
+## Java Implementation
 
 <<< @/../src/main/java/dev/anurag/handbook/lld/whatsapp/DBConnectionUtil.java
+

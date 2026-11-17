@@ -1,10 +1,12 @@
-# Messaging Queue
+# Messagingqueue
 
-- **Package:** `dev.anurag.handbook.lld.whatsapp.MessagingQueue`
-- **Source Code:** [MessagingQueue.java](https://github.com/itsanurag-dev/design-handbook/blob/main/src/main/java/dev/anurag/handbook/lld/whatsapp/MessagingQueue.java)
+> **System Domain:** [Chat & Messaging System](/lld/whatsapp/messagingqueue)
+> **Architecture Category:** Low-Level Object-Oriented Design (LLD)
 
----
+## Overview
+Production implementation of `Messagingqueue` providing core state modeling, thread safety, and domain contracts for the **Chat & Messaging System**.
 
-## Implementation
+## Java Implementation
 
 <<< @/../src/main/java/dev/anurag/handbook/lld/whatsapp/MessagingQueue.java
+

@@ -1,10 +1,12 @@
-# In Memory File System
+# Inmemoryfilesystem
 
-- **Package:** `dev.anurag.handbook.lld.filesystem.InMemoryFileSystem`
-- **Source Code:** [InMemoryFileSystem.java](https://github.com/itsanurag-dev/design-handbook/blob/main/src/main/java/dev/anurag/handbook/lld/filesystem/InMemoryFileSystem.java)
+> **System Domain:** [In-Memory File System](/lld/filesystem/inmemoryfilesystem)
+> **Architecture Category:** Low-Level Object-Oriented Design (LLD)
 
----
+## Overview
+Production implementation of `Inmemoryfilesystem` providing core state modeling, thread safety, and domain contracts for the **In-Memory File System**.
 
-## Implementation
+## Java Implementation
 
 <<< @/../src/main/java/dev/anurag/handbook/lld/filesystem/InMemoryFileSystem.java
+

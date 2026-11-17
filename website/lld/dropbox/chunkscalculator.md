@@ -1,10 +1,12 @@
-# Chunks Calculator
+# Chunkscalculator
 
-- **Package:** `dev.anurag.handbook.lld.dropbox.ChunksCalculator`
-- **Source Code:** [ChunksCalculator.java](https://github.com/itsanurag-dev/design-handbook/blob/main/src/main/java/dev/anurag/handbook/lld/dropbox/ChunksCalculator.java)
+> **System Domain:** [Cloud Storage & Sync](/lld/dropbox/chunkscalculator)
+> **Architecture Category:** Low-Level Object-Oriented Design (LLD)
 
----
+## Overview
+Production implementation of `Chunkscalculator` providing core state modeling, thread safety, and domain contracts for the **Cloud Storage & Sync**.
 
-## Implementation
+## Java Implementation
 
 <<< @/../src/main/java/dev/anurag/handbook/lld/dropbox/ChunksCalculator.java
+

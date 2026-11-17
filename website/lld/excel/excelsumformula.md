@@ -1,10 +1,12 @@
-# Excel Sum Formula
+# Excelsumformula
 
-- **Package:** `dev.anurag.handbook.lld.excel.ExcelSumFormula`
-- **Source Code:** [ExcelSumFormula.java](https://github.com/itsanurag-dev/design-handbook/blob/main/src/main/java/dev/anurag/handbook/lld/excel/ExcelSumFormula.java)
+> **System Domain:** [Spreadsheet Formula Engine](/lld/excel/excelsumformula)
+> **Architecture Category:** Low-Level Object-Oriented Design (LLD)
 
----
+## Overview
+Production implementation of `Excelsumformula` providing core state modeling, thread safety, and domain contracts for the **Spreadsheet Formula Engine**.
 
-## Implementation
+## Java Implementation
 
 <<< @/../src/main/java/dev/anurag/handbook/lld/excel/ExcelSumFormula.java
+

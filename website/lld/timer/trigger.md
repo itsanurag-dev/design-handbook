@@ -1,10 +1,12 @@
 # Trigger
 
-- **Package:** `dev.anurag.handbook.lld.timer.Trigger`
-- **Source Code:** [Trigger.java](https://github.com/itsanurag-dev/design-handbook/blob/main/src/main/java/dev/anurag/handbook/lld/timer/Trigger.java)
+> **System Domain:** [Distributed Task Scheduler](/lld/timer/trigger)
+> **Architecture Category:** Low-Level Object-Oriented Design (LLD)
 
----
+## Overview
+Production implementation of `Trigger` providing core state modeling, thread safety, and domain contracts for the **Distributed Task Scheduler**.
 
-## Implementation
+## Java Implementation
 
 <<< @/../src/main/java/dev/anurag/handbook/lld/timer/Trigger.java
+

@@ -1,10 +1,12 @@
 # Node
 
-- **Package:** `dev.anurag.handbook.lld.dropbox.Node`
-- **Source Code:** [Node.java](https://github.com/itsanurag-dev/design-handbook/blob/main/src/main/java/dev/anurag/handbook/lld/dropbox/Node.java)
+> **System Domain:** [Cloud Storage & Sync](/lld/dropbox/node)
+> **Architecture Category:** Low-Level Object-Oriented Design (LLD)
 
----
+## Overview
+Production implementation of `Node` providing core state modeling, thread safety, and domain contracts for the **Cloud Storage & Sync**.
 
-## Implementation
+## Java Implementation
 
 <<< @/../src/main/java/dev/anurag/handbook/lld/dropbox/Node.java
+

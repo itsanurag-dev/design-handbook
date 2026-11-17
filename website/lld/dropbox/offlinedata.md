@@ -1,10 +1,12 @@
-# Offline Data
+# Offlinedata
 
-- **Package:** `dev.anurag.handbook.lld.dropbox.OfflineData`
-- **Source Code:** [OfflineData.java](https://github.com/itsanurag-dev/design-handbook/blob/main/src/main/java/dev/anurag/handbook/lld/dropbox/OfflineData.java)
+> **System Domain:** [Cloud Storage & Sync](/lld/dropbox/offlinedata)
+> **Architecture Category:** Low-Level Object-Oriented Design (LLD)
 
----
+## Overview
+Production implementation of `Offlinedata` providing core state modeling, thread safety, and domain contracts for the **Cloud Storage & Sync**.
 
-## Implementation
+## Java Implementation
 
 <<< @/../src/main/java/dev/anurag/handbook/lld/dropbox/OfflineData.java
+

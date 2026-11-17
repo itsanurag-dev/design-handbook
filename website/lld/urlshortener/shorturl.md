@@ -1,10 +1,12 @@
-# Short U R L
+# Shorturl
 
-- **Package:** `dev.anurag.handbook.lld.urlshortener.ShortURL`
-- **Source Code:** [ShortURL.java](https://github.com/itsanurag-dev/design-handbook/blob/main/src/main/java/dev/anurag/handbook/lld/urlshortener/ShortURL.java)
+> **System Domain:** [Distributed URL Shortener](/lld/urlshortener/shorturl)
+> **Architecture Category:** Low-Level Object-Oriented Design (LLD)
 
----
+## Overview
+Production implementation of `Shorturl` providing core state modeling, thread safety, and domain contracts for the **Distributed URL Shortener**.
 
-## Implementation
+## Java Implementation
 
 <<< @/../src/main/java/dev/anurag/handbook/lld/urlshortener/ShortURL.java
+

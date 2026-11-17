@@ -1,10 +1,12 @@
 # Instagram
 
-- **Package:** `dev.anurag.handbook.lld.instagram.Instagram`
-- **Source Code:** [Instagram.java](https://github.com/itsanurag-dev/design-handbook/blob/main/src/main/java/dev/anurag/handbook/lld/instagram/Instagram.java)
+> **System Domain:** [Social Network Feed](/lld/instagram/instagram)
+> **Architecture Category:** Low-Level Object-Oriented Design (LLD)
 
----
+## Overview
+Production implementation of `Instagram` providing core state modeling, thread safety, and domain contracts for the **Social Network Feed**.
 
-## Implementation
+## Java Implementation
 
 <<< @/../src/main/java/dev/anurag/handbook/lld/instagram/Instagram.java
+

@@ -1,10 +1,12 @@
-# Autocomplete Search
+# Autocompletesearch
 
-- **Package:** `dev.anurag.handbook.lld.autocomplete.AutocompleteSearch`
-- **Source Code:** [AutocompleteSearch.java](https://github.com/itsanurag-dev/design-handbook/blob/main/src/main/java/dev/anurag/handbook/lld/autocomplete/AutocompleteSearch.java)
+> **System Domain:** [Typeahead Autocomplete (Trie)](/lld/autocomplete/autocompletesearch)
+> **Architecture Category:** Low-Level Object-Oriented Design (LLD)
 
----
+## Overview
+Production implementation of `Autocompletesearch` providing core state modeling, thread safety, and domain contracts for the **Typeahead Autocomplete (Trie)**.
 
-## Implementation
+## Java Implementation
 
 <<< @/../src/main/java/dev/anurag/handbook/lld/autocomplete/AutocompleteSearch.java
+

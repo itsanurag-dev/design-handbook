@@ -1,10 +1,12 @@
 # Receiver
 
-- **Package:** `dev.anurag.handbook.lld.whatsapp.Receiver`
-- **Source Code:** [Receiver.java](https://github.com/itsanurag-dev/design-handbook/blob/main/src/main/java/dev/anurag/handbook/lld/whatsapp/Receiver.java)
+> **System Domain:** [Chat & Messaging System](/lld/whatsapp/receiver)
+> **Architecture Category:** Low-Level Object-Oriented Design (LLD)
 
----
+## Overview
+Production implementation of `Receiver` providing core state modeling, thread safety, and domain contracts for the **Chat & Messaging System**.
 
-## Implementation
+## Java Implementation
 
 <<< @/../src/main/java/dev/anurag/handbook/lld/whatsapp/Receiver.java
+
