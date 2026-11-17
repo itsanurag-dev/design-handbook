@@ -26,3 +26,4 @@ public class Message<T> {
         return "Message{id='" + id + "', topic='" + topic + "', payload=" + payload + "}";
     }
 }
+

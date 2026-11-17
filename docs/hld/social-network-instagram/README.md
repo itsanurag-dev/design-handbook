@@ -75,3 +75,4 @@ A pure **Push (Fan-out-on-write)** model breaks when celebrities with 50M follow
 **The Hybrid Production Solution**:
 1. **Regular Users (< 25,000 followers)**: Use **Fan-out on Write (Push)**. When user posts, workers write post IDs into all followers' Redis timeline lists.
 2. **Celebrity Users (> 25,000 followers)**: Use **Fan-out on Load (Pull)**. Posts are NOT pushed to followers. Instead, when a follower requests their feed, the system fetches their pre-computed regular feed and merges it at read-time with recent posts from the celebrities they follow.
+

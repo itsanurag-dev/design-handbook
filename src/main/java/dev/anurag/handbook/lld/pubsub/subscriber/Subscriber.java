@@ -6,3 +6,4 @@ public interface Subscriber<T> {
     String getId();
     void onMessage(Message<T> message);
 }
+

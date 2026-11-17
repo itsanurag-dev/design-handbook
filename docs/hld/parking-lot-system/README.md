@@ -62,3 +62,4 @@ To eliminate race conditions between multiple entry gates competing for the last
 1. All available spots per vehicle type are stored in **Redis Sets** (`available_spots:compact`).
 2. Allocation utilizes atomic `SPOP available_spots:compact` or a distributed lock (`Redlock`).
 3. If successful, the spot ID is assigned and marked in PostgreSQL; if empty, the entry gate immediately displays "LOT FULL".
+
